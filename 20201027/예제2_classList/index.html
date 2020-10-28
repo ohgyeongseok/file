@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>classList</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="text" class="change_font_style change_bg change_width">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+  </div>
+  <button onclick="textFunc()">click here!!</button>
+  <!--script-->
+  <script type="text/javascript">
+  /*classList*/
+  function textFunc(){
+    //class 단일 추가
+    // document.querySelector('#text').classList.add('change_font_style');
+    //class 다중 추가
+    // document.querySelector('#text').classList.add('change_font_style','change_bg','change_width');
+    //class 다중 삭제
+    //document.querySelector('#text').classList.remove('change_font_style','change_bg','change_width');
+    //class 단일 삭제
+    document.querySelector('#text').classList.remove('change_bg');
+  }
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

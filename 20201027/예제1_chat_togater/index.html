@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>TITLE</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+     <!--[if lt IE 9]>
+       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+ </head>
+
+ <body>
+   <div id="header">
+     <h1>Let's chat togather</h1>
+   </div>
+   <div class="chatting_wrap">
+     <!--chat a-->
+     <div class="chatting">
+       <div class="title">chris</div>
+       <div class="chat_box">
+         <!--채팅영역-->
+       </div>
+       <div class="input_box">
+         <!--입력창-->
+        <input type="text" class="user_a" onkeypress='inputChat(this)'><!--onkeypress event 추가영역-->
+        <button class="user_a" onclick="sendTxt(this)">보내기</button><!--onclick event 추가영역-->
+       </div>
+     </div>
+     <!--chat b-->
+     <div class="chatting">
+       <div class="title">jane</div>
+       <div class="chat_box">
+         <!--채팅영역-->
+       </div>
+       <div class="input_box">
+         <!--입력창-->
+        <input type="text" class="user_b" onkeypress="inputChat(this)"><!--onkeypress event 추가영역-->
+        <button class="user_b" onclick="sendTxt(this)">보내기</button><!--onclick event 추가영역-->
+       </div>
+     </div>
+     <!--chat c-->
+     <div class="chatting">
+       <div class="title">jane</div>
+       <div class="chat_box">
+         <!--채팅영역-->
+       </div>
+       <div class="input_box">
+         <!--입력창-->
+        <input type="text" class="user_c" onkeypress="inputChat(this)"><!--onkeypress event 추가영역-->
+        <button class="user_c" onclick="sendTxt(this)">보내기</button><!--onclick event 추가영역-->
+       </div>
+     </div>
+   </div>
+    <script>
+    //채팅 실행 로직
+    var inputTxt ='';//전역변수 선언
+    
+    function inputChat(event){
+      inputTxt = event.value;
+      if(window.event.keycode==13){
+        if(event.value !=''){
+          chattingFunc(event,0);
+          clearText(inputTxt,event,0)
+        }
+      }
+    }
+      </script>
+
+  </body>
+ </html>
